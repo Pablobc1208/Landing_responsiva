@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "variables" as *;
+@use "functions" as *;
+
+// Media query "desde este ancho en adelante": @include up(md) { ... }
+@mixin up($breakpoint) {
+  @if not map.has-key($breakpoints, $breakpoint) {
+    @error "El breakpoint '#{$breakpoint}' no existe en $breakpoints";
+  }
+
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Etiquetas redondeadas (hero y cards): cambian padding y colores
+@mixin pill($padding, $color, $background, $border: none) {
+  padding: $padding;
+  border: $border;
+  color: $color;
+  background-color: $background;
+  font-size: rem(11);
+  line-height: 1.2;
+  letter-spacing: rem(0.5);
+}
+
+// Botón relleno: el hover y el active se calculan oscureciendo el color
+@mixin btn-solid($background: tone(primary), $color: tone(white)) {
+  padding: rem(14) rem(28);
+  color: $color;
+  background-color: $background;
+  font-size: rem(15);
+  line-height: 1.25;
+
+  &:hover {
+    color: $color;
+    background-color: shade($background, 5%);
+  }
+
+  &:active {
+    background-color: shade($background, 10%);
+  }
+}
+
+// Botón con borde: en hover se rellena con el color del borde
+@mixin btn-outline($color: tone(primary), $hover-text: tone(white)) {
+  padding: rem(8) rem(16);
+  border: 1px solid $color;
+  color: $color;
+  background-color: transparent;
+  font-size: rem(14);
+  line-height: 1.25;
+
+  &:hover {
+    color: $hover-text;
+    background-color: $color;
+  }
+}

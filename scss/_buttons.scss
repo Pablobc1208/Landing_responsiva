@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+// Botón principal (Reservar, Reserva tu visita)
+.btn-aqua {
+  @include btn-solid;
+
+  @include up(xl) {
+    font-size: rem(17);
+  }
+}
+
+// Botón del modo oscuro
+.btn-tema {
+  @include btn-outline;
+}

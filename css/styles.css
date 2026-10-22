@@ -1,5 +1,7 @@
-body {
-  color: red;
+.test {
+  color: #0f5c78;
+  padding: 0.9375rem;
+  background-color: rgb(4.7712418301%, 29.2636165577%, 38.1699346405%);
+  box-shadow: 0 4px 12px rgba(8, 34, 46, 0.12);
+  background-image: linear-gradient(to bottom, #a6dded 0%, #7cc9e0 30%, #2a86a6 55%, #0e4a63 75%, #05141b 100%);
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,33 @@
+// Paleta de colores de AquaSur
+$palette: (
+  ink: #08222e,
+  primary: #0f5c78,
+  link: #12506b,
+  foam: #a6dded,
+  mist: #e7eef0,
+  white: #ffffff,
+  abyss: #02080b,
+);
+
+// Puntos de corte (mismos que Bootstrap md y xl)
+$breakpoints: (
+  md: 768px,
+  xl: 1200px,
+);
+
+// Tamaño base para convertir px a rem
+$base-font-size: 16;
+
+// Degradado del fondo: de la superficie al fondo del mar
+$sea-stops: (
+  #a6dded 0%,
+  #7cc9e0 30%,
+  #2a86a6 55%,
+  #0e4a63 75%,
+  #05141b 100%
+);
+
+
+// Tipografías
+$font-heading: "Quicksand", sans-serif;
+$font-body: "Work Sans", sans-serif;

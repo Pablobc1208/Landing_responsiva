@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+.hero {
+  gap: rem(18);
+  padding-top: rem(40);
+
+  @include up(md) {
+    gap: rem(22);
+    padding: rem(64) 0 rem(24);
+  }
+
+  @include up(xl) {
+    gap: rem(26);
+    padding: rem(110) 0 rem(64);
+  }
+
+  h1 {
+    font-size: rem(28);
+    line-height: 1.1;
+
+    @include up(md) {
+      max-width: rem(560);
+      font-size: rem(40);
+    }
+
+    @include up(xl) {
+      max-width: rem(760);
+      font-size: rem(56);
+    }
+  }
+
+  p {
+    line-height: 1.45;
+
+    @include up(md) {
+      max-width: rem(520);
+      font-size: rem(17);
+    }
+
+    @include up(xl) {
+      max-width: rem(600);
+      font-size: rem(18);
+    }
+  }
+}
+
+.hero-etiqueta {
+  @include pill(
+    rem(6) rem(14),
+    tone(primary),
+    alpha(tone(white), 0.16),
+    1px solid alpha(tone(white), 0.32)
+  );
+
+  @include up(xl) {
+    font-size: rem(12);
+  }
+}

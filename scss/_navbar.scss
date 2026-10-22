@@ -1,0 +1,69 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+// Navbar de Bootstrap redefinido con la clase propia .nav-aqua
+.nav-aqua {
+  min-height: rem(64);
+  border-bottom: 1px solid alpha(tone(ink), 0.08);
+
+  @include up(xl) {
+    min-height: rem(76);
+  }
+
+  .logo {
+    font-size: rem(20);
+    color: tone(link);
+
+    @include up(xl) {
+      font-size: rem(24);
+    }
+  }
+
+  .nav-link {
+    padding: rem(12) 0;
+    color: tone(ink);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include up(xl) {
+      font-size: rem(16);
+    }
+  }
+
+  .navbar-nav {
+    @include up(md) {
+      gap: rem(28);
+    }
+
+    @include up(xl) {
+      gap: rem(36);
+    }
+  }
+
+  // Los botones del navbar son más pequeños que los del resto de la página
+  .btn-aqua {
+    margin: rem(8) 0;
+    padding: rem(9) rem(18);
+    font-size: rem(14);
+
+    @include up(md) {
+      margin: 0;
+    }
+
+    @include up(xl) {
+      padding: rem(10) rem(22);
+      font-size: rem(15);
+    }
+  }
+
+  .btn-tema {
+    margin-bottom: rem(12);
+
+    @include up(md) {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:math";
+@use "variables" as *;
+
+// tone(primary) -> devuelve un color de la paleta
+@function tone($name) {
+  @if not map.has-key($palette, $name) {
+    @error "El color '#{$name}' no existe en $palette";
+  }
+  @return map.get($palette, $name);
+}
+
+// rem(15) -> 0.9375rem
+@function rem($px) {
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+// shade(color, 5%) -> el mismo color un poco más oscuro (hover / active)
+@function shade($color, $amount) {
+  @return color.adjust($color, $lightness: -$amount);
+}
+
+// alpha(color, 0.5) -> el mismo color con transparencia
+@function alpha($color, $opacity) {
+  @return color.change($color, $alpha: $opacity);
+}
+
+// sea-gradient() -> degradado vertical con las paradas de $sea-stops
+@function sea-gradient($stops: $sea-stops) {
+  @return linear-gradient(to bottom, $stops...);
+}
