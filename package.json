@@ -1,0 +1,25 @@
+{
+  "name": "landing_responsiva",
+  "version": "1.0.0",
+  "description": "Landing page responsiva para **AquaSur**, un acuario ficticio ubicado en Sevilla. El sitio presenta tres ecosistemas marinos (Arrecife de Coral, Manglar Sumergido y Fosa Abisal) con un diseño que simula una inmersión progresiva en el océano mediante un degradado de fondo de claro a oscuro.",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --no-source-map scss:css",
+    "watch": "sass --watch --no-source-map scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablobc1208/Landing_responsiva.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Pablobc1208/Landing_responsiva/issues"
+  },
+  "homepage": "https://github.com/Pablobc1208/Landing_responsiva#readme",
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}
