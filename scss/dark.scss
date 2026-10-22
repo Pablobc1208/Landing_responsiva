@@ -1,0 +1,42 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+// Modo oscuro: solo se aplica cuando el body tiene la clase .dark-mode (botón #btn-theme)
+body.dark-mode {
+  color: tone(white);
+  background-color: tone(abyss);
+  background-image: sea-gradient($deep-stops);
+
+  &::before {
+    opacity: 0.28;
+  }
+
+  .nav-aqua {
+    border-bottom-color: alpha(tone(white), 0.12);
+
+    .logo,
+    .nav-link {
+      color: tone(white);
+    }
+
+    .nav-link:hover {
+      color: tone(foam);
+    }
+  }
+
+  .navbar-toggler {
+    background-color: tone(foam);
+  }
+
+  // Mismo botón con borde, con los colores invertidos
+  .btn-tema {
+    @include btn-outline(tone(foam), tone(ink));
+  }
+
+  .hero-etiqueta {
+    color: tone(white);
+    border-color: alpha(tone(white), 0.4);
+    background-color: alpha(tone(white), 0.08);
+  }
+}

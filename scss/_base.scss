@@ -33,6 +33,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.95;
+    mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
 
     @include up(md) {
       height: rem(200);

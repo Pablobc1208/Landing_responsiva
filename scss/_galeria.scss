@@ -1,0 +1,67 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+.discover {
+  padding: rem(57) 0 rem(64);
+
+  @include up(md) {
+    padding-top: rem(64);
+  }
+
+  @include up(xl) {
+    padding-top: rem(96);
+  }
+
+  h2 {
+    @include section-title;
+  }
+}
+
+// Concha con el carrusel colocado en el hueco de la perla
+.imagen-concha {
+  max-width: rem(277);
+  margin-top: rem(40);
+
+  @include up(md) {
+    max-width: rem(345.91);
+  }
+
+  @include up(xl) {
+    max-width: rem(428.92);
+  }
+
+  // Flechas del carrusel de Bootstrap redefinidas como anclas
+  .ancla-flecha {
+    top: 57%;
+    bottom: auto;
+    width: 14.5%;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  .ancla-anterior {
+    left: -7%;
+
+    img {
+      transform: rotate(90deg);
+    }
+  }
+
+  .ancla-siguiente {
+    right: -7%;
+
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.concha-foto {
+  top: 19.75%;
+  left: 24.75%;
+  width: 50.5%;
+}

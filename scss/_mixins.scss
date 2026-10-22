@@ -56,3 +56,18 @@
     background-color: $color;
   }
 }
+
+
+// Título de sección (Elige tu zona favorita, Echa un vistazo)
+@mixin section-title {
+  margin-bottom: rem(20);
+  font-size: rem(22);
+
+  @include up(md) {
+    font-size: rem(28);
+  }
+
+  @include up(xl) {
+    font-size: rem(34);
+  }
+}

@@ -31,3 +31,12 @@ $sea-stops: (
 // Tipografías
 $font-heading: "Quicksand", sans-serif;
 $font-body: "Work Sans", sans-serif;
+
+
+// Degradado del modo oscuro
+$deep-stops: (
+  #123a52 0%,
+  #0c2b3e 35%,
+  #071c28 70%,
+  #02080b 100%
+);

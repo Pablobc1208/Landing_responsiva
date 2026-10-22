@@ -5,11 +5,3 @@
 @use "cards";
 @use "galeria";
 @use "footer";
-
-.test {
-  color: tone(primary);
-  padding: rem(15);
-  background-color: shade(tone(primary), 5%);
-  box-shadow: 0 4px 12px alpha(tone(ink), 0.12);
-  background-image: sea-gradient();
-}

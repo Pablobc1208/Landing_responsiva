@@ -1,0 +1,110 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+.cards {
+  padding-top: rem(8);
+
+  @include up(md) {
+    padding-top: rem(40);
+  }
+
+  @include up(xl) {
+    padding-top: rem(48);
+  }
+
+  h2 {
+    @include section-title;
+  }
+}
+
+// Subtítulo de sección (también se usa en la galería)
+.subtitulo {
+  margin: 0 0 rem(20);
+  font-size: rem(14);
+  line-height: 1.2;
+
+  @include up(xl) {
+    font-size: rem(16);
+  }
+}
+
+// La 2.ª y 3.ª card suben para formar el zigzag
+.zona-baja {
+  @include up(md) {
+    margin-top: rem(-110);
+  }
+
+  @include up(xl) {
+    margin-top: rem(-150);
+  }
+}
+
+// Card de Bootstrap redefinida con la clase propia .card-zona
+.card-zona {
+  max-width: rem(520);
+  border-radius: rem(24);
+  color: tone(ink);
+  box-shadow: 0 4px 12px alpha(tone(ink), 0.12);
+
+  .card-body {
+    padding: rem(16) rem(20) rem(20);
+  }
+
+  .card-title {
+    font-size: rem(19);
+    line-height: 1.3;
+
+    @include up(xl) {
+      font-size: rem(20);
+    }
+  }
+
+  ul {
+    font-size: rem(14);
+    line-height: 1.2;
+  }
+
+  // Viñeta propia: escama en lugar del punto de la lista
+  li {
+    min-height: rem(19);
+    padding-left: rem(32);
+    background-image: url("../img/escama.png");
+    background-size: rem(22) rem(19);
+    background-repeat: no-repeat;
+  }
+}
+
+.card-imagen {
+  width: 100%;
+  height: rem(170);
+  object-fit: cover;
+
+  @include up(md) {
+    height: rem(180);
+  }
+
+  @include up(xl) {
+    height: rem(240);
+  }
+}
+
+.card-etiqueta {
+  @include pill(rem(4) rem(10), tone(primary), tone(mist));
+}
+
+.card-enlace {
+  color: tone(link);
+  font-size: rem(13.5);
+  line-height: 1.2;
+  text-decoration: none;
+
+  &:hover {
+    color: shade(tone(primary), 5%);
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: shade(tone(primary), 10%);
+  }
+}
